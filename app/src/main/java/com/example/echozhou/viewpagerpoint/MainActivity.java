@@ -102,6 +102,13 @@ public class MainActivity extends AppCompatActivity {
                 imageView.setImageResource(R.drawable.orange_point);
             }
             ll_point.addView(imageView);
+            final int finalI = i;
+            imageView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    view_pager.setCurrentItem(finalI);
+                }
+            });
         }
     }
 }
